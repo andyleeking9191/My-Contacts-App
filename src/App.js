@@ -1,6 +1,6 @@
 //import Counter from './Components/Counter.js';
 import React from 'react';
-import CardContainer from './Components/CardContainer'
+import CardContainer from './Components/CardContainer';
 import './App.css';
 
 function App() {

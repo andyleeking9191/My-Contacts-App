@@ -2,7 +2,7 @@
   width: 100vw;
   background-color: rgb(43, 42, 51);
 }
-/*Will turn into grid*/
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -20,4 +20,9 @@
   border-radius: 8px;
   background-color: rgba(66,65,77,1);
   color: rgba(249, 249, 250, 1)
+}
+
+.profile__image {
+  border-radius:  50%;
+  margin: .5em auto;
 }

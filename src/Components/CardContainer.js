@@ -5,12 +5,13 @@ const CardContainer = () => {
 
     let [profileList, setProfileList] = useState([]);
 
-      async function fetchProfiles() {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users');
-      const profiles = await response.json();
-      setProfileList(profiles)
-      console.log(profiles)
-  }
+    async function fetchProfiles() {
+        const response = await fetch('https://randomuser.me/api/?results=10&inc=name,picture');
+        const profiles = await response.json();
+        setProfileList(profiles.results);
+        console.log(profiles.results)
+    }
+    
   
   useEffect(() => {
     fetchProfiles()
@@ -19,8 +20,8 @@ const CardContainer = () => {
 
     return(
         <div className='card-container'>
-            {profileList.map(profile => (
-                <ProfileCard name={profile.name} key={profile.name}/>
+            {profileList.map((profile, index) => (
+                <ProfileCard name={profile.name.first} image={profile.picture.thumbnail}/>
             ))}
         </div>
     )
