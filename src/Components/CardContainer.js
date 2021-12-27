@@ -6,10 +6,10 @@ const CardContainer = () => {
     let [profileList, setProfileList] = useState([]);
 
     async function fetchProfiles() {
-        const response = await fetch('https://randomuser.me/api/?results=10&inc=name,picture');
+        const response = await fetch('https://randomuser.me/api/?results=10&nat=US&inc=name,picture,location,cell');
         const profiles = await response.json();
         setProfileList(profiles.results);
-        console.log(profiles.results)
+        console.log(profiles)
     }
     
   
@@ -21,7 +21,16 @@ const CardContainer = () => {
     return(
         <div className='card-container'>
             {profileList.map((profile, index) => (
-                <ProfileCard name={profile.name.first} image={profile.picture.thumbnail}/>
+                <ProfileCard 
+                    firstName={profile.name.first} 
+                    lastName={profile.name.last}
+                    addressNum={profile.location.street.number}
+                    street={profile.location.street.name} 
+                    image={profile.picture.thumbnail}
+                    city={profile.location.city}
+                    state={profile.location.state}
+                    postcode={profile.location.postcode}
+                />
             ))}
         </div>
     )
