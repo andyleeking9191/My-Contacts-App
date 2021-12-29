@@ -8,22 +8,49 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
   margin: 0 auto;
-  width: 90vw;
+  width: 95vw;
   background-color: rgb(43, 42, 51);
-  padding: 2em;
+  padding: 1rem;
 }
 
 .profile-card {
   font-size: 17px;
   text-align: center;
-  padding: .2;
   border-radius: 8px;
   background-color: rgba(66,65,77,1);
-  color: rgba(249, 249, 250, 1)
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+  color: rgba(249, 249, 250, 1);
 }
 
 .profile__image {
-  width: 65px;
-  border-radius:  50%;
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
   margin: 1em auto;
+}
+
+@media only screen and (max-width: 1000px) {
+
+.card-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+}
+
+
+@media only screen and  (max-width: 700px) {
+  
+.card-container {
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

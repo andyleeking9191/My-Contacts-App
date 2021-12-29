@@ -6,10 +6,16 @@ const CardContainer = () => {
     let [profileList, setProfileList] = useState([]);
 
     async function fetchProfiles() {
-        const response = await fetch('https://randomuser.me/api/?results=10&nat=US&inc=name,picture,location,cell');
-        const profiles = await response.json();
-        setProfileList(profiles.results);
-        console.log(profiles)
+        const url = 'https://randomuser.me/api/?results=10&nat=US&inc=name,picture,location,cell'
+        try{
+            const response = await fetch(url);
+            const profiles = await response.json();
+            setProfileList(profiles.results);
+            console.log(profiles)
+        } catch(error) {
+            console.log(error)
+        }
+        
     }
     
   
@@ -26,7 +32,7 @@ const CardContainer = () => {
                     lastName={profile.name.last}
                     addressNum={profile.location.street.number}
                     street={profile.location.street.name} 
-                    image={profile.picture.thumbnail}
+                    image={profile.picture.large}
                     city={profile.location.city}
                     state={profile.location.state}
                     postcode={profile.location.postcode}
