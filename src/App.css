@@ -3,10 +3,27 @@
   background-color: rgb(43, 42, 51);
 }
 
+.navbar {
+  width: 100%;
+  background-color: rgb(43, 42, 51);
+  text-align: center;
+  color: rgba(249, 249, 250, 1);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1rem;
+  padding: .75rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navbar__logo {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
+  gap: 1rem;
   margin: 0 auto;
   width: 95vw;
   background-color: rgb(43, 42, 51);
@@ -14,12 +31,13 @@
 }
 
 .profile-card {
-  font-size: 17px;
+  font-size: 1.25rem;
   text-align: center;
   border-radius: 8px;
   background-color: rgba(66,65,77,1);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
   color: rgba(249, 249, 250, 1);
+  padding: .5rem;
 }
 
 .profile__image {
@@ -29,7 +47,7 @@
   margin: 1em auto;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1500px) {
 
 .card-container {
   grid-template-columns: repeat(3, 1fr);
@@ -38,8 +56,14 @@
 
 }
 
+@media only screen and (max-width: 1050px) {
 
-@media only screen and  (max-width: 700px) {
+  .profile-card {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and  (max-width: 850px) {
   
 .card-container {
   grid-template-columns: repeat(2, 1fr);
@@ -48,7 +72,7 @@
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
 
   .card-container {
     grid-template-columns: repeat(1, 1fr);

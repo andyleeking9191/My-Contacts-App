@@ -9,8 +9,8 @@ const ProfileCard = (props)=> {
             </div>
         <div className='profile__info-container'>
            <p className='profile__name'>{props.firstName} {props.lastName}</p>
-           <p>{props.addressNum} {props.street}</p>
-           <p>{props.city}, {props.state} {props.postcode}</p>
+           <p>{props.cell}</p>
+           <p>{props.email}</p>
         </div>
            
        </div>
