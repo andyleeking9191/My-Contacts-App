@@ -4,6 +4,9 @@
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   background-color: rgb(43, 42, 51);
   text-align: center;
@@ -18,6 +21,19 @@
 .navbar__logo {
   font-size: 2.5rem;
   font-weight: 300;
+}
+
+.navbar__searchbox {
+    border: none;
+    outline: none;
+    color: rgba(249, 249, 250, 1);
+    margin-right: 3%;
+    padding: .75rem;
+    width: 20rem;
+    border-radius: 10px;
+    background-color: #42414d;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.50);
+    
 }
 
 .card-container {
