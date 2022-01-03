@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Components/Navbar';
-import CardContainer from './Components/CardContainer';
+import Navbar from './components/Navbar/Navbar';
+import CardContainer from './components/CardContainer/CardContainer';
 import './App.css';
 
 function App() {

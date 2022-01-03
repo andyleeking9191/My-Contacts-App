@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ProfileCard from './ProfileCard';
+import ProfileCard from '../ProfileCard/ProfileCard';
+import './CardContainer.css';
 
 const CardContainer = () => {
 

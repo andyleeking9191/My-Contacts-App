@@ -1,5 +1,6 @@
 import React from 'react';
-import Searchbox from './SearchBox';
+import Searchbox from '../SearchBox/SearchBox';
+import './Navbar.css';
 
 
 const Navbar = () => {
