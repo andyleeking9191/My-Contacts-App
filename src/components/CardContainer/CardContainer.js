@@ -1,29 +1,9 @@
-import React, { useState, useEffect } from 'react';
 import ProfileCard from '../ProfileCard/ProfileCard';
 import './CardContainer.css';
 
-const CardContainer = () => {
+const CardContainer = (props) => {
 
-    let [profileList, setProfileList] = useState([]);
-
-    async function fetchProfiles() {
-        const url = 'https://randomuser.me/api/?results=20&nat=US&inc=name,picture,location,cell,email'
-        try{
-            const response = await fetch(url);
-            const profiles = await response.json();
-            setProfileList(profiles.results);
-            console.log(profiles)
-        } catch(error) {
-            console.log(error)
-        }
-        
-    }
-    
-  
-  useEffect(() => {
-    fetchProfiles()
-  } ,[])
-
+    const profileList = props.listOfProfiles;
 
     return(
         <div className='card-container'>

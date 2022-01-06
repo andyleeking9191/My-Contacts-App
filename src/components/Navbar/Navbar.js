@@ -3,11 +3,11 @@ import Searchbox from '../SearchBox/SearchBox';
 import './Navbar.css';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div className='navbar'>
             <div className='navbar__logo'>My Contacts App</div>
-            <Searchbox/>
+            <Searchbox handleTxtChange={props.handleTxtChange}/>
         </div>
     )
 }

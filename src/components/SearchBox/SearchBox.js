@@ -1,12 +1,13 @@
 import React from 'react';
 import './SearchBox.css';
 
-const Searchbox = () => {
+const Searchbox = (props) => {
     return (
         <input 
-            className='navbar__searchbox'
+            className="navbar__searchbox"
             type="text"
-            placeHolder="Search Contacts"
+            placeholder="Search Contacts"
+            onChange={props.handleTxtChange}
         >
         </input>
     )
