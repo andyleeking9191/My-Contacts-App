@@ -29,7 +29,6 @@ function App() {
 
   const handleTxtChange = (event) => {
     setSearchBox(event.target.value);
-    console.log(event.target.value)
   }
 
   const filteredProfiles = profileList.filter((profile) => {

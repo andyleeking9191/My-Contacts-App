@@ -15,6 +15,15 @@
     margin: 1em auto;
   }
 
+  .profile__text--copy {
+    cursor: pointer;
+    
+  }
+
+  .profile__text--copy:hover {
+    filter: brightness(75%);
+  }
+
   @media only screen and (max-width: 1050px) {
 
     .profile-card {
