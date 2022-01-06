@@ -10,7 +10,7 @@ function App() {
   
 
     async function fetchProfiles() {
-        const url = 'https://randomuser.me/api/?results=21&nat=US&inc=name,picture,location,cell,email'
+        const url = 'https://randomuser.me/api/?results=21&nat=US&inc=name,picture,location,cell,email,login'
         try{
             const response = await fetch(url);
             const profiles = await response.json();

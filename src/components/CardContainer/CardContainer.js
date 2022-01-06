@@ -8,7 +8,8 @@ const CardContainer = (props) => {
     return(
         <div className='card-container'>
             {profileList.map((profile) => (
-                <ProfileCard 
+                <ProfileCard
+                    key={profile.login.uuid} 
                     firstName={profile.name.first} 
                     lastName={profile.name.last}
                     cell={profile.cell}
