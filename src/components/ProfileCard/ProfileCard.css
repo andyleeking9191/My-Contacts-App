@@ -5,14 +5,14 @@
     background-color: rgba(66,65,77,1);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
     color: rgba(249, 249, 250, 1);
-    padding: .5rem;
+    padding: 1.25rem;
   }
   
   .profile__image {
     width: 100px;
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
-    margin: 1em auto;
+    margin: 0, auto, 1rem, auto;
   }
 
   .profile__text--copy {
@@ -22,6 +22,20 @@
 
   .profile__text--copy:hover {
     filter: brightness(75%);
+  }
+
+  .profile__btn {
+    background-color: rgb(43, 42, 51);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: rgba(249, 249, 250, 1);
+    padding: .35rem 4rem;
+  }
+
+  .profile__btn:hover{
+    filter: brightness(75%);
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 1050px) {

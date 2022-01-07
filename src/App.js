@@ -32,7 +32,7 @@ function App() {
   }
 
   const filteredProfiles = profileList.filter((profile) => {
-    const fullName = profile.name.first.concat(profile.name.last)
+    const fullName = profile.name.first.concat(' ' + profile.name.last)
     return  fullName.toLowerCase().includes(searchbox.toLocaleLowerCase())
   })
   

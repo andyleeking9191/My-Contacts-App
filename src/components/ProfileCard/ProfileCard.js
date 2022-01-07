@@ -1,11 +1,14 @@
-import React from "react";
+import React,{ useState } from "react";
 import "./ProfileCard.css";
 
+
 const ProfileCard = (props) => {
+
   const coppiedTxtHandler = (event) => {
     let coppiedTxt = event.target.textContent;
     navigator.clipboard.writeText(coppiedTxt);
   };
+
 
   return (
     <div className="profile-card">
@@ -25,6 +28,7 @@ const ProfileCard = (props) => {
         <p onClick={coppiedTxtHandler} className="profile__text--copy ">
           {props.email}
         </p>
+        <button onClick={props.openDetailedProfileHandler} className="profile__btn">Detailed view</button>
       </div>
     </div>
   );

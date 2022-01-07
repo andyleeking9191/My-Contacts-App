@@ -8,6 +8,13 @@
     padding: 1rem;
   }
 
+  .card-container--detailed-profile {
+    margin: 0 auto;
+    width: 95vw;
+    background-color: rgb(43, 42, 51);
+    padding: 1rem;
+  }
+
   @media only screen and (max-width: 1500px) {
 
     .card-container {
