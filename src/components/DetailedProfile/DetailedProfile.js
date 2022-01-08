@@ -2,9 +2,12 @@ import React from "react";
 import "./DetailedProfile.css";
 
 const DetailedProfile = (props) => {
+
+  console.log(props.profileData)
+
   return (
     <div className="detailed-profile">
-      <p>This will be the detailed profile</p>
+      <p>{props.profileData.firstName}</p>
       <button className="profile__btn" onClick={props.closeDetailedProfileHandler}>
         Close detailed view
       </button>

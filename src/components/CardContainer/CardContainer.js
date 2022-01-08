@@ -6,14 +6,17 @@ import "./CardContainer.css";
 const CardContainer = (props) => {
   const profileList = props.listOfProfiles;
   const [detailedProfile, setDetailedprofile] = useState(false);
+  const [detailedData, setDetailedData] = useState([])
 
-  const openDetailedProfileHandler = () => {
+  const openDetailedProfileHandler = (userObj) => {
+    setDetailedData(userObj)
     setDetailedprofile(true);
   };
 
   const closeDetailedProfileHandler = () => {
     setDetailedprofile(false);
   };
+
 
   return (
   <div className={!detailedProfile ? "card-container" : "card-container--detailed-profile"}>
@@ -36,6 +39,7 @@ const CardContainer = (props) => {
         ))
       ) : (
         <DetailedProfile
+          profileData={detailedData}
           closeDetailedProfileHandler={closeDetailedProfileHandler}
         />
       )}
