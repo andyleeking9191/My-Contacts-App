@@ -14,24 +14,22 @@ const DetailedProfile = (props) => {
         X
       </button>
       <div className="detailed-profile__top-info-container">
-        <img
-          alt="profile"
-          className="detailed-profile__image"
-          src={profile.image}
-        ></img>
-        <div className="detailed-profile__top-info-text">
-        <p>
+        
+          <img
+            alt="profile"
+            className="detailed-profile__image"
+            src={profile.image}
+          ></img>
+    
+
+        <p className="detailed-profile__name">
           {profile.firstName} {profile.lastName}
         </p>
-        <p>{profile.cell}</p>
-        <p>{profile.email}</p>
-        </div>
+        <p>Cell: {profile.cell}</p>
+        <p>Email: {profile.email}</p>
       </div>
       <p>
-        {profile.addressNum} {profile.street}
-      </p>
-      <p>
-        {profile.city}, {profile.state} {profile.postcode}
+        Mailing Address: {profile.addressNum} {profile.street} {profile.city}, {profile.state} {profile.postcode}
       </p>
     </div>
   );
