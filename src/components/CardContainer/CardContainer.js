@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProfileCard from "../ProfileCard/ProfileCard";
 import DetailedProfile from "../DetailedProfile/DetailedProfile";
-import "./CardContainer.css";
+import styles from "./CardContainer.module.css";
 
 const CardContainer = (props) => {
   const profileList = props.listOfProfiles;
@@ -19,7 +19,7 @@ const CardContainer = (props) => {
 
 
   return (
-  <div className={!detailedProfile ? "card-container" : "card-container--detailed-profile"}>
+  <div className={!detailedProfile ? styles["card-container"] : styles["card-container--detailed-profile"]}>
       {!detailedProfile ? (
         profileList.map((profile) => (
           <ProfileCard

@@ -1,10 +1,10 @@
-import React from 'react';
-import './SearchBox.css';
+import React from "react";
+import styles from "./SearchBox.module.css";
 
 const Searchbox = (props) => {
     return (
         <input 
-            className="navbar__searchbox"
+            className={styles["navbar__searchbox"]}
             type="text"
             placeholder="Search Contacts"
             onChange={props.handleTxtChange}

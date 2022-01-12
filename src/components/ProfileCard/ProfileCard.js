@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProfileCard.css";
+import styles from "./ProfileCard.module.css";
 
 const ProfileCard = (props) => {
   const coppiedTxtHandler = (event) => {
@@ -10,26 +10,26 @@ const ProfileCard = (props) => {
   const user = {...props};
 
   return (
-    <div className="profile-card">
-      <div className="profile__image-container">
-        <img alt="profile" className="profile__image" src={props.image}></img>
+    <div className={styles["profile-card"]}>
+      <div className={styles["profile__image-container"]}>
+        <img alt="profile" className={styles["profile__image"]} src={props.image}></img>
       </div>
-      <div className="profile__info-container">
+      <div className={styles["profile__info-container"]}>
         <p
-          className="profile__name profile__text--copy"
+          className={styles["profile__name"], styles["profile__text--copy"]}
           onClick={coppiedTxtHandler}
         >
           {props.firstName} {props.lastName}
         </p>
-        <p onClick={coppiedTxtHandler} className="profile__text--copy ">
+        <p onClick={coppiedTxtHandler} className={styles["profile__text--copy"]}>
           {props.cell}
         </p>
-        <p onClick={coppiedTxtHandler} className="profile__text--copy ">
+        <p onClick={coppiedTxtHandler} className={styles["profile__text--copy"]}>
           {props.email}
         </p>
         <button
           onClick={()=> props.openDetailedProfileHandler(user)}
-          className="profile__btn"
+          className={styles["profile__btn"]}
         >
           Detailed view
         </button>

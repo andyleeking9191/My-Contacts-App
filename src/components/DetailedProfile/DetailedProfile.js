@@ -1,28 +1,28 @@
 import React from "react";
-import "./DetailedProfile.css";
+import styles from "./DetailedProfile.module.css";
 
 const DetailedProfile = (props) => {
   const profile = props.profileData;
   console.log(profile);
 
   return (
-    <div className="detailed-profile">
+    <div className={styles["detailed-profile"]}>
       <button
-        className="profile__btn--close"
+        className={styles["profile__btn--close"]}
         onClick={props.closeDetailedProfileHandler}
       >
         X
       </button>
-      <div className="detailed-profile__top-info-container">
+      <div className={styles["detailed-profile__top-info-container"]}>
         
           <img
             alt="profile"
-            className="detailed-profile__image"
+            className={styles["detailed-profile__image"]}
             src={profile.image}
           ></img>
     
 
-        <p className="detailed-profile__name">
+        <p className={styles["detailed-profile__name"]}>
           {profile.firstName} {profile.lastName}
         </p>
         <p>Cell: {profile.cell}</p>

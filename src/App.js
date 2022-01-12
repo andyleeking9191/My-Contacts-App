@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import CardContainer from './components/CardContainer/CardContainer';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
 
@@ -39,7 +39,7 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div className={styles["App"]}>
       <Navbar handleTxtChange={handleTxtChange} />
       <CardContainer listOfProfiles={filteredProfiles}/>
     </div>
