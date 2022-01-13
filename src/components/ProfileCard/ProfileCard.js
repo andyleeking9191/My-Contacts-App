@@ -38,11 +38,9 @@ const ProfileCard = (props) => {
         >
           {props.email}
         </p>
-        <Button
-          onClick={() => props.openDetailedProfileHandler(user)}
-          className="btn"
-          buttonName="Detailed view"
-        ></Button>
+        <Button onClick={() => props.openDetailedProfileHandler(user)}>
+          Detailed View
+        </Button>
       </div>
     </div>
   );

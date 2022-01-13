@@ -8,12 +8,12 @@ const DetailedProfile = (props) => {
 
   return (
     <div className={styles["detailed-profile"]}>
-      <button
-        className={styles["profile__btn--close"]}
+      <Button
+        className={"btn--close"}
         onClick={props.closeDetailedProfileHandler}
       >
         X
-      </button>
+      </Button>
       <div className={styles["detailed-profile__top-info-container"]}>
         
           <img
@@ -32,8 +32,8 @@ const DetailedProfile = (props) => {
       <p>
         Mailing Address: {profile.addressNum} {profile.street} {profile.city}, {profile.state} {profile.postcode}
       </p>
-      <Button className="btn" buttonName="Edit Profile"></Button>
-      <Button className="btn" buttonName="Delete Profile"></Button>
+      <Button>Edit Profile</Button>
+      <Button>Delete Profile</Button>
     </div>
   );
 };
