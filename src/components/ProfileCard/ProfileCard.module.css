@@ -17,25 +17,10 @@
 
   .profile__text--copy {
     cursor: pointer;
-    
   }
 
   .profile__text--copy:hover {
     filter: brightness(75%);
-  }
-
-  .profile__btn {
-    background-color: rgb(43, 42, 51);
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    color: rgba(249, 249, 250, 1);
-    padding: .35rem 4rem;
-  }
-
-  .profile__btn:hover{
-    filter: brightness(75%);
-    cursor: pointer;
   }
 
   @media only screen and (max-width: 1050px) {

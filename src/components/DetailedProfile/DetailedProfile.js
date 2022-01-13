@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../UI/Button/Button"
 import styles from "./DetailedProfile.module.css";
 
 const DetailedProfile = (props) => {
@@ -31,6 +32,8 @@ const DetailedProfile = (props) => {
       <p>
         Mailing Address: {profile.addressNum} {profile.street} {profile.city}, {profile.state} {profile.postcode}
       </p>
+      <Button className="btn" buttonName="Edit Profile"></Button>
+      <Button className="btn" buttonName="Delete Profile"></Button>
     </div>
   );
 };
