@@ -32,8 +32,10 @@ const DetailedProfile = (props) => {
       <p>
         Mailing Address: {profile.addressNum} {profile.street} {profile.city}, {profile.state} {profile.postcode}
       </p>
-      <Button>Edit Profile</Button>
-      <Button>Delete Profile</Button>
+      <div className={styles["detailed-profile__btn-container"]}>
+        <Button className="btn--small">Edit Profile</Button>
+        <Button className="btn--small">Delete Profile</Button>
+      </div>
     </div>
   );
 };

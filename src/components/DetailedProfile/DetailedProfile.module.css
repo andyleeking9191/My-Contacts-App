@@ -34,6 +34,11 @@
 
   .detailed-profile__name {
     font-size: 2rem;
-    
+  }
+
+  .detailed-profile__btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
